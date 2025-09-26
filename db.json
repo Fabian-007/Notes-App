@@ -3,7 +3,7 @@
     {
       "id": "1",
       "content": "HTML is easy",
-      "important": false
+      "important": true
     },
     {
       "id": "2",
@@ -43,7 +43,7 @@
     {
       "id": "99b8",
       "content": "a new note...",
-      "important": true
+      "important": false
     },
     {
       "id": "d714",
@@ -52,6 +52,11 @@
     },
     {
       "id": "8715",
+      "content": "a new note...",
+      "important": false
+    },
+    {
+      "id": "5e1a",
       "content": "a new note...",
       "important": false
     }
