@@ -9,6 +9,13 @@ const App = () => {
   const [newNote, setNewNote] = useState("a new note...");
   const [showAll, setShowAll] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null)
+ 
+  // do not render anything if noted is still null
+  if(!notes){
+    return null
+  }
+
+
 
   useEffect(() => {
     noteService
@@ -19,7 +26,7 @@ const App = () => {
     });
   }, []);
 
-  console.log("render", notes.length, "notes");
+  // console.log("render", notes.length, "notes");
 
   const toggleImportanceOf = (id) => {
     const note = notes.find((n) => n.id === id);

@@ -3,7 +3,7 @@ const Note = (props)=>{
   const {note, toggleImportance} = props
 
   const label = note.important
-   ? 'make not iportant'  : 'make important'
+   ? 'make not important'  : 'make important'
   return(
     <>
     <li className="note">
