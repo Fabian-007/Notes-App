@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static('dist'));
 app.use(express.json());
 const cors = require('cors');
-app.use(cors({origin: 'http://localhost:5173'}));
+app.use(cors());
 
 let notes = [
   {
