@@ -1,6 +1,7 @@
 //import node built-in web server module
 const express = require('express');
 const app = express();
+// Serve static frontend build
 app.use(express.static('dist'));
 app.use(express.json());
 const cors = require('cors');
@@ -79,6 +80,13 @@ app.post('/api/notes', (request, response) => {
     response.json(note)
 
 })
+
+
+// Fallback route for React
+const path = require('path');
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+});
 
 
 
